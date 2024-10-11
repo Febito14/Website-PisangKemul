@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PISANG KEMUL BY PUTRA RAGIL</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Modal CSS -->
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <style>
+      /* Style the modal */
+      .modal-2 {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Modal Content */
+      .modal-content-2 {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 500px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Modal Title */
+      .modal-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: black;
+        float: left;
+      }
+
+      /* Modal Header */
+      .modal-header {
+        overflow: hidden;
+      }
+
+      /* Modal Body */
+      .modal-body {
+        padding: 0 20px;
+      }
+
+      /* Modal Body Vertical */
+      .modal-body.vertical {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      /* Modal Footer */
+      .modal-footer {
+        text-align: right;
+        padding: 10px 20px;
+      }
+
+      /* Style the modal buttons */
+      .modal-footer button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .btn-secondary {
+        background-color: #ccc;
+        color: #333;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Search Box */
+      #search-box {
+        width: calc(100% - 30px);
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      /* Search Button */
+      #search-button-modal {
+        width: calc(100% - 30px);
+        padding: 15px;
+        background-color: #814100;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"
+        >Pisang Kemul <span><small>by Putra Ragil</small></span></a
+      >
+      <div class="navbar-nav">
+        <a href="Index.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Menu.html">Menu</a>
+        <a href="Contact Us.html">Contact Us</a>
+      </div>
+
+      <div class="navbar-extra">
+        <!-- example icon Search -->
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <!-- example icon shooping cart -->
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <!-- example icon HUMBERGER MENU -->
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Modal Search-->
+    <div id="myModal" class="modal-2">
+      <div class="modal-dialog">
+        <div class="modal-content-2">
+          <div class="modal-header">
+            <h5 class="modal-title">Search</h5>
+            <button type="button" class="close" aria-label="Close">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="search-box" placeholder="Search..." />
+            <button type="button" id="search-button-modal">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Launch modal
+    </button>
+
+    <!-- Hero Section HOME Start -->
+    <div class="layarpenuh" id="home">
+      <div class="intro">
+        <h1>SELAMAT DATANG DI PISANG KEMUL</h1>
+        <p>
+          selamat berkunjung kedalam website kami silahkan menikmati layanan
+          dari kami
+        </p>
+        <a href="#" class="tombol"> BELI SEKARANG </a>
+      </div>
+    </div>
+    <!-- Hero Section end -->
+
+    <!-- Start About US -->
+    <section id="about" class="about">
+      <h2 style="color: #814100">About<span style="color: black"> Us</span></h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="IMG/KLMPK.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h2>Kenapa memilih Pisang Kemul?</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+            ad.bsauibbkjna hbhs
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error,
+            rem. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Ullam, perspiciatis. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Eius, corrupti.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End About US -->
+
+    <!-- section menu start -->
+    <section class="product" id="product">
+      <div class="header">
+        <h2 style="color: #814100">
+          Menu<span style="color: black"> Us</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in
+          aliquid nemo totam atque qui!
+        </p>
+        <div class="row">
+          <div class="menu-card">
+            <img
+              src="IMG/Menu1.JPG"
+              alt="Spesial Macha Chesse"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Spesial Macha Chesse</h3>
+            <p class="menu-card-price">IDR 15.000</p>
+            <a href="#" class="tombol"> Buy Now </a>
+          </div>
+          <div class="menu-card">
+            <img
+              src="IMG/Menu2.JPG"
+              alt="Spesial Americano Chesse"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Spesial Americano Chesse</h3>
+            <p class="menu-card-price">IDR 15.000</p>
+            <a href="#" class="tombol"> Buy Now </a>
+          </div>
+          <div class="menu-card">
+            <img
+              src="IMG/Menu3.JPG"
+              alt="Spesial Strawbery Chesse"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Spesial Strawbery Chesse</h3>
+            <p class="menu-card-price">IDR 15.000</p>
+            <a href="#" class="tombol"> Buy Now </a>
+          </div>
+          <div class="menu-card">
+            <img
+              src="IMG/Menu4.JPG"
+              alt="Spesial Strawbery Chocolate"
+              class="menu-card-img"
+            />
+            <h3 class="menu-card-title">Spesial Strawbery Chocolate</h3>
+            <p class="menu-card-price">IDR 15.000</p>
+            <a href="#" class="tombol"> Buy Now </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section menu end -->
+
+    <!-- Kontak Section Start -->
+    <section id="contact" class="contact">
+      <h2 style="color: #814100">
+        Contact<span style="color: black"> Us</span>
+      </h2>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.235264423311!2d110.40075037357997!3d-7.764856977011353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599565566693%3A0xe4180ce0746f331c!2sPisang%20Kemul%20By%20Putra%20Ragil%2C%20Condong%20Catur!5e0!3m2!1sid!2sid!4v1714484134397!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="" class="form">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <label for="name" class="label">Nama lengkap</label>
+            <input
+              type="text"
+              id="name"
+              class="input input-name"
+              placeholder="Nama"
+            />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <label for="Email" class="label">Alamat email</label>
+            <input
+              type="text"
+              id="email"
+              class="input input-email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <label for="nomor" class="label">Nomor telepon</label>
+            <input
+              type="text"
+              id="nomor"
+              class="input input-nomor"
+              placeholder="Nomor Telepon"
+            />
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- Kontak Section End -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="social">
+        <a
+          href="https://www.instagram.com/pisangkemul_id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+      <div class="links">
+        <a href="Index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact Us.html">Contact Us</a>
+      </div>
+      <div class="credit">
+        <p>
+          Kelompok 10 <a href="">Pisang Kemul by Putra Ragil</a> . | &copy;
+          2024.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("search-button");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
